@@ -3,11 +3,11 @@
 > prefix = ctrl + b
 
 ## tmux概念
-一个ssh连接可有多个tmux session
-session里面有windows
-windows里面有panel
-ssh掉线重登录tmux中的现场还在
-tmux之所以能保存现场，因为其进程一直在后台运行
+一个ssh连接可有多个tmux session  
+session里面有windows  
+windows里面有panel  
+ssh掉线重登录tmux中的现场还在  
+tmux之所以能保存现场，因为其进程一直在后台运行  
 
 
 ## personal config
@@ -50,10 +50,10 @@ set -s escape-time 1
 
 ## reload conf file
 
-`prefix + :` 进入命令模式然后输入
-`source-file ~/.tmux.conf`
+`prefix + :` 进入命令模式然后输入  
+`source-file ~/.tmux.conf`  
 
-按我个人配置，后续只要`prefix + r`即可
+按我个人配置，后续只要`prefix + r`即可  
 
 ## System operation
 | command | usage | 
