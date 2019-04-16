@@ -1,5 +1,39 @@
 # tmux 烹饪书
+## tmux安装
+## ubuntu安装
+`apt install tmux`
 
+### centos安装
+`yum install tmux`安装的是1.8版，很老的版本，可以使用以下脚本安装2.8稳定版  
+install-tmux2.8.sh (https://gist.github.com/pokev25/4b9516d32f4021d945a140df09bf1fde)  
+``` bash
+# Install tmux 2.8 on Centos
+
+# install deps
+yum install gcc kernel-devel make ncurses-devel
+
+# DOWNLOAD SOURCES FOR LIBEVENT AND MAKE AND INSTALL
+curl -LOk https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
+tar -xf libevent-2.1.8-stable.tar.gz
+cd libevent-2.1.8-stable
+./configure --prefix=/usr/local
+make
+make install
+
+# DOWNLOAD SOURCES FOR TMUX AND MAKE AND INSTALL
+
+curl -LOk https://github.com/tmux/tmux/releases/download/2.8/tmux-2.8.tar.gz
+tar -xf tmux-2.8.tar.gz
+cd tmux-2.8
+LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
+make
+make install
+
+# pkill tmux
+# close your terminal window (flushes cached tmux executable)
+# open new shell and check tmux version
+tmux -V
+```
 > prefix = ctrl + b
 
 ## tmux概念
