@@ -43,6 +43,7 @@ windows里面有panel
 ssh掉线重登录tmux中的现场还在  
 tmux之所以能保存现场，因为其进程一直在后台运行  
 
+## 
 
 ## 个人配置
 config file
@@ -164,6 +165,11 @@ prefix + |
 prefix + hjkl
 prefix + ↑↓←→
 ```
+
+缩放窗格
+```
+prefix + z (z for zoom) # 有多个窗格的情况下，聚焦正在工作的窗格  
+``` 
 
 置换窗格
 ```
