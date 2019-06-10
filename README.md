@@ -43,7 +43,13 @@ windows里面有panel
 ssh掉线重登录tmux中的现场还在  
 tmux之所以能保存现场，因为其进程一直在后台运行  
 
-## 
+## 自动使用tmux
+将以下配置加入服务器的`~/.bash_profile`或 `~/.zsh_profile`文件中, 只要一登录服务器就会自动使用tmux（Mac也适用）    
+```
+if [ -z "$TMUX" ]; then
+    tmux attach -t 0 || tmux new -s 0
+fi
+```
 
 ## 个人配置
 config file
