@@ -188,6 +188,13 @@ prefix + } # 向后置换
 prefix + KJHL # 上下左右调整面板边界
 ```
 
+## 嵌套tmux
+不建议嵌套使用tmux，但是有时候会有从本地tmux ssh到远程server，然后又在远程server也使用tmux的情况，这样就会产生嵌套了。  
+如果恰好两个tmux的prefix键都是一样的，那么使用prefix键时将只对外层的tmux有效，没办法使用里层的tmux。  
+要解决这个问题，按两次prefix键即可（第二层按2次，第三层按3次，以此类推）。  
+![](https://raw.githubusercontent.com/huahuayu/img/master/20190630222644.png)
+
+
 
 
 
