@@ -134,6 +134,18 @@ tmux ls
 2: 2 windows (created Wed Dec  5 19:50:16 2018) [265x58]
 ```
 
+### 删除session
+``` bash
+$ tmux ls
+0: 2 windows (created Fri Jan 10 07:39:41 2020) [137x24]
+1: 4 windows (created Fri Jan 10 07:40:09 2020) [137x24]
+2: 1 windows (created Fri Jan 10 07:40:38 2020) [137x24]
+$ tmux kill-session -t 1
+$ tmux kill-session -t 2
+$ tmux ls
+0: 2 windows (created Fri Jan 10 07:39:41 2020) [137x24]
+```
+
 ## 窗口（如同浏览器tab）
 ### 新建窗口
 ```
